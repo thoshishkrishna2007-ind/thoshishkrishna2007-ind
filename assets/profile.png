@@ -1,0 +1,31 @@
+# Profile PNG — Instructions
+
+> **Note:** GitHub renders SVG images directly, so all the animated identity SVGs (`profile-avatar.svg`, `ai-identity-core.svg`, `hologram-avatar.svg`, `profile-frame.svg`) work immediately without this file.
+
+A static `profile.png` is provided as a **fallback / social preview** for platforms that do not render SVG (e.g., email signatures, external sites, or as a GitHub social preview image).
+
+## Option A — Generate from the SVG (Recommended)
+Open any of the new SVG files in a browser and screenshot the result, or use a converter:
+
+```bash
+# ImageMagick example (render frame SVG to PNG)
+convert assets/profile-frame.svg -resize 400x400 assets/profile.png
+```
+
+## Option B — Use your GitHub avatar directly
+GitHub already serves your profile photo at:
+```
+https://avatars.githubusercontent.com/u/254927016?v=4
+```
+
+## Recommended spec
+| Property | Value |
+|----------|-------|
+| Size | 400×400 px (square) |
+| Format | PNG (transparent or dark bg) |
+| File size | < 1 MB |
+
+## Customization
+Download/copy your preferred PNG to `assets/profile.png`. The README can reference it with:
+```md
+![Profile](assets/profile.png)

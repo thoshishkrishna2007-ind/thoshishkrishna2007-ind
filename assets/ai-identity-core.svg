@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="520" viewBox="0 0 520 520">
+  <defs>
+    <!-- CUSTOMIZATION: replace avatar URL -->
+    <clipPath id="core-crop">
+      <circle cx="260" cy="260" r="96"/>
+    </clipPath>
+    <linearGradient id="vivFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <radialGradient id="vivPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="520" height="520" fill="#050914" rx="32"/>
+
+  <!-- Breathing ambient core -->
+  <circle cx="260" cy="260" r="175" fill="url(#vivPulse)">
+    <animate attributeName="r" values="175;195;175" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ===== PROFILE PHOTO as core ===== -->
+  <image x="164" y="164" width="192" height="192" clip-path="url(#core-crop)"
+         href="https://avatars.githubusercontent.com/u/254927016?v=4" preserveAspectRatio="xMidYMid slice"/>
+  <circle cx="260" cy="260" r="96" fill="none" stroke="#00E5FF" stroke-opacity="0.6" stroke-width="2"/>
+
+  <!-- ===== ROTATING OUTER RINGS (smooth, balanced) ===== -->
+  <circle cx="260" cy="260" r="150" fill="none" stroke="url(#vivFill)" stroke-width="2" stroke-opacity="0.65" stroke-dasharray="68 20">
+    <animateTransform attributeName="transform" type="rotate" from="0 260 260" to="360 260 260" dur="28s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="260" r="150" fill="none" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.3" stroke-dasharray="12 30">
+    <animateTransform attributeName="transform" type="rotate" from="360 260 260" to="0 260 260" dur="36s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="260" r="176" fill="none" stroke="#C0C0C0" stroke-opacity="0.3" stroke-width="1">
+    <animateTransform attributeName="transform" type="rotate" from="0 260 260" to="360 260 260" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  <!-- 3D tilt ring -->
+  <ellipse cx="260" cy="260" rx="166" ry="166" fill="none" stroke="#4D8DFF" stroke-opacity="0.35" stroke-width="1.2">
+    <animate attributeName="ry" values="166;52;166" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ===== NEURAL NETWORK (hexagon symmetry) ===== -->
+  <g stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1">
+    <line x1="260" y1="112" x2="420" y2="180"/>
+    <line x1="260" y1="112" x2="100" y2="180"/>
+    <line x1="420" y1="180" x2="420" y2="340"/>
+    <line x1="100" y1="180" x2="100" y2="340"/>
+    <line x1="420" y1="340" x2="260" y2="408"/>
+    <line x1="100" y1="340" x2="260" y2="408"/>
+    <line x1="260" y1="112" x2="260" y2="96"/>
+  </g>
+  <g>
+    <circle cx="260" cy="112" r="4" fill="url(#node)"><animate attributeName="r" values="4;6.5;4" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="420" cy="180" r="4" fill="url(#node)"><animate attributeName="r" values="4;6.5;4" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="100" cy="180" r="4" fill="url(#node)"><animate attributeName="r" values="4;6.5;4" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="420" cy="340" r="4" fill="url(#node)"><animate attributeName="r" values="4;6.5;4" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="100" cy="340" r="4" fill="url(#node)"><animate attributeName="r" values="4;6.5;4" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="408" r="4" fill="url(#node)"><animate attributeName="r" values="4;6.5;4" dur="3.4s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Orbiting particles -->
+  <circle r="5" fill="#00E5FF" filter="url(#glow)">
+    <animateMotion dur="28s" repeatCount="indefinite" path="M260,110 A150,150 0 1,1 260,410 A150,150 0 1,1 260,110"/>
+  </circle>
+  <circle r="3.5" fill="#FFFFFF">
+    <animateMotion dur="20s" repeatCount="indefinite" path="M260,84 A176,176 0 1,0 260,436 A176,176 0 1,0 260,84"/>
+  </circle>
+
+  <!-- Hologram projection scan -->
+  <rect x="70" y="60" width="380" height="2.5" rx="1.25" fill="#00E5FF" opacity="0.45">
+    <animate attributeName="y" values="60;460;60" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== LABELS ===== -->
+  <g font-family="-apple-system, Arial, sans-serif">
+    <text x="260" y="480" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="url(#vivFill)">KRISHNA AI CORE</text>
+    <text x="260" y="502" text-anchor="middle" font-size="12" fill="#C0C0C0">SYSTEM STATUS: <tspan fill="#00E5FF">ACTIVE</tspan></text>
+    <text x="260" y="476" text-anchor="middle" font-size="9" letter-spacing="6" fill="#FFFFFF" opacity="0.4">NEURAL CORE v2.0</text>
+  </g>
+</svg>

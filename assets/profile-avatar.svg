@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="640" viewBox="0 0 520 640">
+  <defs>
+    <!-- ============================================================
+         CUSTOMIZATION: Replace avatar URL with your own photo.
+         Adjust animations by editing the `dur` (seconds) attributes.
+         ============================================================ -->
+    <clipPath id="circular-crop">
+      <circle cx="260" cy="200" r="132"/>
+    </clipPath>
+
+    <!-- Premium VisionOS gradients -->
+    <linearGradient id="vivGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="vivRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#4D8DFF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="vivSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#C0C0C0"/>
+      <stop offset="100%" stop-color="#8a8f98"/>
+    </linearGradient>
+    <radialGradient id="vivAmbient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#0066FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0066FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Refined glow: single blur for performance -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="520" height="640" fill="#050914" rx="32"/>
+
+  <!-- Ambient breathing glow behind avatar -->
+  <circle cx="260" cy="200" r="170" fill="url(#vivAmbient)">
+    <animate attributeName="r" values="170;185;170" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ===== PROFILE PHOTO ===== -->
+  <image x="128" y="68" width="264" height="264" clip-path="url(#circular-crop)"
+         href="https://avatars.githubusercontent.com/u/254927016?v=4" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- ===== ROTATING ENERGY RINGS (balanced, smooth) ===== -->
+  <g>
+    <!-- Outer gradient ring -->
+    <circle cx="260" cy="200" r="152" fill="none" stroke="url(#vivRing)" stroke-width="2" stroke-opacity="0.65" stroke-dasharray="60 22">
+      <animateTransform attributeName="transform" type="rotate" from="0 260 200" to="360 260 200" dur="26s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Counter ring -->
+    <circle cx="260" cy="200" r="152" fill="none" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="10 32">
+      <animateTransform attributeName="transform" type="rotate" from="360 260 200" to="0 260 200" dur="34s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Silver inner ring -->
+    <circle cx="260" cy="200" r="143" fill="none" stroke="url(#vivSilver)" stroke-width="1" stroke-opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0 260 200" to="360 260 200" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Orbiting particles -->
+    <circle r="4.5" fill="#00E5FF" filter="url(#glow)">
+      <animateMotion dur="26s" repeatCount="indefinite" path="M260,48 A152,152 0 1,1 260,352 A152,152 0 1,1 260,48"/>
+    </circle>
+    <circle r="3.2" fill="#FFFFFF">
+      <animateMotion dur="18s" repeatCount="indefinite" path="M260,57 A143,143 0 1,0 260,343 A143,143 0 1,0 260,57"/>
+    </circle>
+  </g>
+
+  <!-- ===== HUD TARGETING CIRCLES (precise pulse) ===== -->
+  <g fill="none" stroke="#00E5FF">
+    <circle cx="260" cy="200" r="122" stroke-opacity="0.4" stroke-width="1.2">
+      <animate attributeName="r" values="122;130;122" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.4;0.15;0.4" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="200" r="104" stroke-opacity="0.25" stroke-width="1">
+      <animate attributeName="r" values="104;112;104" dur="4s" dur-offset="0.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- HUD corner brackets (balanced quadrants) -->
+  <g stroke="#00E5FF" stroke-opacity="0.7" fill="none" stroke-width="2">
+    <path d="M118,68 L172,68 M172,68 L172,83"/>
+    <path d="M118,332 L172,332 M172,332 L172,317"/>
+    <path d="M402,68 L348,68 M348,68 L348,83"/>
+    <path d="M402,332 L348,332 M348,332 L348,317"/>
+  </g>
+
+  <!-- ===== SCANNING LINE (smooth ease) ===== -->
+  <rect x="128" y="0" width="264" height="2.5" rx="1.25" fill="#00E5FF" opacity="0.6" filter="url(#glow)">
+    <animate attributeName="y" values="68;332;68" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.15;0.6" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== FLOATING PARTICLES (sparse, elegant) ===== -->
+  <circle cx="70" cy="130" r="2" fill="#00E5FF"><animate attributeName="cy" values="130;105;130" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" repeatCount="indefinite"/></circle>
+  <circle cx="450" cy="100" r="2" fill="#FFFFFF"><animate attributeName="cy" values="100;125;100" dur="8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.8;0.3" dur="8s" repeatCount="indefinite"/></circle>
+  <circle cx="90" cy="300" r="1.5" fill="#0066FF"><animate attributeName="cy" values="300;280;300" dur="9s" repeatCount="indefinite"/></circle>
+  <circle cx="435" cy="290" r="2" fill="#00E5FF"><animate attributeName="cy" values="290;265;290" dur="7.5s" repeatCount="indefinite"/></circle>
+
+  <!-- ===== GLASSMORPHISM IDENTITY CARD ===== -->
+  <g transform="translate(28,392)">
+    <rect width="464" height="216" rx="24" fill="url(#vivGlass)" stroke="#00E5FF" stroke-opacity="0.35" stroke-width="1.5"/>
+    <rect width="464" height="4" rx="2" fill="url(#vivRing)"/>
+
+    <g font-family="-apple-system, Arial, sans-serif">
+      <!-- NAME -->
+      <text x="26" y="40" font-size="10" letter-spacing="4" fill="#00E5FF">NAME</text>
+      <text x="26" y="66" font-size="21" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">VENKAT THOSHISH KRISHNA</text>
+
+      <!-- ROLE -->
+      <text x="26" y="100" font-size="10" letter-spacing="4" fill="#00E5FF">ROLE</text>
+      <text x="26" y="124" font-size="16" font-weight="500" fill="url(#vivSilver)">AI ENGINEER</text>
+
+      <!-- SPECIALIZATION -->
+      <text x="26" y="158" font-size="10" letter-spacing="4" fill="#00E5FF">SPECIALIZATION</text>
+      <text x="26" y="182" font-size="13.5" fill="#FFFFFF">Artificial Intelligence · Digital Twins · Full Stack</text>
+    </g>
+
+    <!-- STATUS pill -->
+    <g transform="translate(332,150)">
+      <rect x="0" y="0" width="112" height="32" rx="16" fill="#061024" stroke="#00E5FF" stroke-opacity="0.5"/>
+      <circle cx="18" cy="16" r="5" fill="#00E5FF" filter="url(#glow)">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <text x="32" y="21" font-family="monospace" font-size="12" fill="#FFFFFF">ONLINE</text>
+    </g>
+  </g>
+</svg>

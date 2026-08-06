@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="440" viewBox="0 0 920 440">
+  <defs>
+    <linearGradient id="tline" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <filter id="tglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#00E5FF" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="60" font-size="26" font-weight="bold" fill="#FFFFFF" letter-spacing="2">RESEARCH &amp; INNOVATION TIMELINE</text>
+    <text x="40" y="86" font-size="14" font-family="monospace" fill="#00E5FF">> trajectory.visualize()</text>
+  </g>
+
+  <!-- Vertical timeline line -->
+  <line x1="110" y1="120" x2="110" y2="390" stroke="url(#tline)" stroke-width="3" stroke-opacity="0.6"/>
+  <!-- Moving pulse + comet -->
+  <circle cx="110" cy="120" r="6" fill="#00E5FF" filter="url(#tglow)">
+    <animate attributeName="cy" values="120;390;120" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="120" r="3" fill="#FFFFFF">
+    <animate attributeName="cy" values="120;390;120" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ===== Timeline items ===== -->
+  <g font-size="15">
+    <!-- 2025 -->
+    <circle cx="110" cy="155" r="9" fill="#061024" stroke="#00E5FF" stroke-width="2.5">
+      <animate attributeName="r" values="9;12;9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="150" y="145" font-family="monospace" font-size="18" font-weight="bold" fill="#00E5FF">2025</text>
+    <text x="150" y="167" fill="#FFFFFF">Started AI Journey</text>
+    <text x="150" y="185" font-size="12" fill="#C0C0C0">Began Computer Science + Artificial Intelligence path</text>
+
+    <!-- 2026 -->
+    <circle cx="110" cy="240" r="9" fill="#061024" stroke="#0066FF" stroke-width="2.5">
+      <animate attributeName="r" values="9;12;9" dur="2s" dur-offset="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="150" y="230" font-family="monospace" font-size="18" font-weight="bold" fill="#0066FF">2026</text>
+    <text x="150" y="252" fill="#FFFFFF">Cybersecurity Internship</text>
+    <text x="150" y="270" font-size="12" fill="#C0C0C0">Hands-on security + defensive systems engineering</text>
+
+    <!-- 2026 research -->
+    <circle cx="110" cy="315" r="9" fill="#061024" stroke="#00E5FF" stroke-width="2.5">
+      <animate attributeName="r" values="9;12;9" dur="2s" dur-offset="1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="150" y="305" font-family="monospace" font-size="18" font-weight="bold" fill="#00E5FF">2026</text>
+    <text x="150" y="327" fill="#FFFFFF">Healthcare Digital Twin Research</text>
+    <text x="150" y="345" font-size="12" fill="#C0C0C0">MedTwin AI — patient intelligence platform</text>
+
+    <!-- 2027+ -->
+    <circle cx="110" cy="385" r="9" fill="#061024" stroke="#C0C0C0" stroke-width="2.5">
+      <animate attributeName="r" values="9;12;9" dur="2s" dur-offset="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="150" y="375" font-family="monospace" font-size="18" font-weight="bold" fill="#C0C0C0">2027+</text>
+    <text x="150" y="397" fill="#FFFFFF">Building Future AI Systems</text>
+    <text x="150" y="415" font-size="12" fill="#C0C0C0">Next-generation intelligent platforms</text>
+  </g>
+</svg>
+</content>

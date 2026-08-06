@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="520" viewBox="0 0 520 520">
+  <defs>
+    <!-- CUSTOMIZATION: replace avatar URL -->
+    <clipPath id="h-crop">
+      <circle cx="260" cy="260" r="112"/>
+    </clipPath>
+    <!-- Blueprint grid -->
+    <pattern id="blueprint" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="#00E5FF" stroke-opacity="0.1" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.5"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="520" height="520" fill="#050B18" rx="32"/>
+  <rect width="520" height="520" fill="url(#blueprint)"/>
+
+  <!-- ===== AVATAR PHOTO ===== -->
+  <image x="148" y="148" width="224" height="224" clip-path="url(#h-crop)"
+         href="https://avatars.githubusercontent.com/u/254927016?v=4" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- ===== 3D CHARACTER SCAN RINGS ===== -->
+  <circle cx="260" cy="260" r="132" fill="none" stroke="#00E5FF" stroke-opacity="0.45" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="rotate" from="0 260 260" to="360 260 260" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="260" r="132" fill="none" stroke="#0066FF" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="18 14">
+    <animateTransform attributeName="transform" type="rotate" from="360 260 260" to="0 260 260" dur="26s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Vertical scan ring (3D) -->
+  <ellipse cx="260" cy="260" rx="132" ry="36" fill="none" stroke="#00E5FF" stroke-opacity="0.45" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="rotate" from="0 260 260" to="360 260 260" dur="13s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ===== HUMAN SILHOUETTE SCAN ===== -->
+  <rect x="104" y="0" width="312" height="264" fill="url(#scanGrad)">
+    <animate attributeName="y" values="104;416;104" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="104" y="0" width="312" height="2.5" rx="1.25" fill="#00E5FF" filter="url(#glow)">
+    <animate attributeName="y" values="104;416;104" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== DATA POINTS around face (balanced) ===== -->
+  <g>
+    <circle cx="260" cy="205" r="3" fill="#00E5FF"><animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="225" cy="230" r="3" fill="#00E5FF"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.1s" repeatCount="indefinite"/></circle>
+    <circle cx="295" cy="230" r="3" fill="#00E5FF"><animate attributeName="opacity" values="1;0.2;1" dur="2.3s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="285" r="3" fill="#00E5FF"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="230" cy="280" r="2.5" fill="#4D8DFF"><animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="290" cy="280" r="2.5" fill="#4D8DFF"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.7s" repeatCount="indefinite"/></circle>
+  </g>
+  <g stroke="#00E5FF" stroke-opacity="0.25" stroke-width="1">
+    <line x1="260" y1="205" x2="382" y2="150"/>
+    <line x1="225" y1="230" x2="140" y2="182"/>
+    <line x1="295" y1="230" x2="392" y2="230"/>
+    <line x1="260" y1="285" x2="382" y2="330"/>
+  </g>
+
+  <!-- ===== CYBERNETIC HUD (balanced telemetry) ===== -->
+  <g font-family="monospace" font-size="11" fill="#00E5FF" opacity="0.85">
+    <text x="40" y="50">SUBJECT: V.T.K</text>
+    <text x="40" y="68" fill="#FFFFFF" opacity="0.6">SCAN: 100%</text>
+    <text x="40" y="472">BIOMETRIC: LOCKED</text>
+    <text x="40" y="490" fill="#FFFFFF" opacity="0.6">NEURAL: SYNCED</text>
+    <text x="480" y="50" text-anchor="end">AI ANALYSIS</text>
+    <text x="480" y="68" text-anchor="end">IDENTITY: CONFIRMED</text>
+    <text x="480" y="472" text-anchor="end">STATUS: <tspan fill="#00E5FF">ACTIVE</tspan></text>
+  </g>
+
+  <!-- HUD corner brackets -->
+  <g stroke="#00E5FF" stroke-opacity="0.7" fill="none" stroke-width="2">
+    <path d="M104,122 L154,122 L154,136"/>
+    <path d="M104,398 L154,398 L154,384"/>
+    <path d="M416,122 L366,122 L366,136"/>
+    <path d="M416,398 L366,398 L366,384"/>
+  </g>
+</svg>

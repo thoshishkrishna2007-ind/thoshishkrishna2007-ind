@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="440" viewBox="0 0 1020 440">
+  <defs>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <filter id="cdrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="cglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00E5FF" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="60" font-size="26" font-weight="bold" fill="#FFFFFF" letter-spacing="2">PROJECT GARAGE</text>
+    <text x="40" y="86" font-size="14" font-family="monospace" fill="#00E5FF">> flagship_vehicles.init()</text>
+  </g>
+
+  <!-- ===== Card 1: MEDTWIN AI (flagship) with hover glow + scan ===== -->
+  <g transform="translate(40,120)" filter="url(#cdrop)">
+    <rect width="300" height="270" rx="18" fill="url(#card)" stroke="#00E5FF" stroke-opacity="0.5" stroke-width="1.5" filter="url(#cglow)"/>
+    <rect width="300" height="5" rx="2.5" fill="url(#accent)"/>
+    <!-- Scan line on flagship -->
+    <rect x="0" y="0" width="300" height="3" fill="#00E5FF" opacity="0.4">
+      <animate attributeName="y" values="0;270;0" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="20" y="42" font-size="12" font-family="monospace" fill="#C0C0C0">PROJECT 01 · FLAGSHIP</text>
+    <text x="20" y="72" font-size="22" font-weight="bold" fill="#00E5FF">MEDTWIN AI</text>
+    <text x="20" y="97" font-size="13" fill="#FFFFFF">AI Healthcare Digital Twin Platform</text>
+    <line x1="20" y1="112" x2="280" y2="112" stroke="#00E5FF" stroke-opacity="0.2"/>
+    <g font-size="12.5" fill="#C0C0C0">
+      <text x="20" y="140">▸ Patient Intelligence Passport</text>
+      <text x="20" y="164">▸ AI Health Timeline</text>
+      <text x="20" y="188">▸ Hospital Resource Prediction</text>
+      <text x="20" y="212">▸ Medical AI Assistant</text>
+    </g>
+    <g transform="translate(20,238)">
+      <circle cx="6" cy="6" r="5" fill="#00E5FF"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+      <text x="20" y="10" font-family="monospace" font-size="11" fill="#FFFFFF">DEPLOYED</text>
+    </g>
+  </g>
+
+  <!-- ===== Card 2: GENESIS PLATFORM ===== -->
+  <g transform="translate(360,120)" filter="url(#cdrop)">
+    <rect width="300" height="270" rx="18" fill="url(#card)" stroke="#0066FF" stroke-opacity="0.5" stroke-width="1.5"/>
+    <rect width="300" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="20" y="42" font-size="12" font-family="monospace" fill="#C0C0C0">PROJECT 02</text>
+    <text x="20" y="72" font-size="22" font-weight="bold" fill="#FFFFFF">GENESIS PLATFORM</text>
+    <text x="20" y="97" font-size="13" fill="#00E5FF">Innovation &amp; Startup Expo</text>
+    <line x1="20" y1="112" x2="280" y2="112" stroke="#00E5FF" stroke-opacity="0.2"/>
+    <g font-size="12.5" fill="#C0C0C0">
+      <text x="20" y="140">▸ Event Management</text>
+      <text x="20" y="164">▸ Registration System</text>
+      <text x="20" y="188">▸ AI Voice Navigation</text>
+      <text x="20" y="212">▸ Admin Dashboard</text>
+    </g>
+    <g transform="translate(20,238)">
+      <circle cx="6" cy="6" r="5" fill="#0066FF"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+      <text x="20" y="10" font-family="monospace" font-size="11" fill="#FFFFFF">IN DEVELOPMENT</text>
+    </g>
+  </g>
+
+  <!-- ===== Card 3: AI LAB ===== -->
+  <g transform="translate(680,120)" filter="url(#cdrop)">
+    <rect width="300" height="270" rx="18" fill="url(#card)" stroke="#C0C0C0" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="300" height="5" rx="2.5" fill="#C0C0C0"/>
+    <text x="20" y="42" font-size="12" font-family="monospace" fill="#C0C0C0">PROJECT 03</text>
+    <text x="20" y="72" font-size="22" font-weight="bold" fill="#C0C0C0">AI LAB</text>
+    <text x="20" y="97" font-size="13" fill="#FFFFFF">Artificial Intelligence Experiments</text>
+    <line x1="20" y1="112" x2="280" y2="112" stroke="#C0C0C0" stroke-opacity="0.2"/>
+    <g font-size="12.5" fill="#C0C0C0">
+      <text x="20" y="140">▸ Generative AI Prototypes</text>
+      <text x="20" y="164">▸ ML Experimentation</text>
+      <text x="20" y="188">▸ Automation Pipelines</text>
+      <text x="20" y="212">▸ Research Sandbox</text>
+    </g>
+    <g transform="translate(20,238)">
+      <circle cx="6" cy="6" r="5" fill="#C0C0C0"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+      <text x="20" y="10" font-family="monospace" font-size="11" fill="#FFFFFF">RESEARCH</text>
+    </g>
+  </g>
+</svg>
+</content>

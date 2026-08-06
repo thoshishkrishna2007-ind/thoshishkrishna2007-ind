@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#00E5FF"/>
+      <stop offset="70%" stop-color="#0066FF"/>
+      <stop offset="100%" stop-color="#061024" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(210,210)">
+    <!-- 3D rotating ring system -->
+    <circle r="185" fill="none" stroke="#0066FF" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="50 20">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="185" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="12 26">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <!-- 3D planetary orbit -->
+    <ellipse rx="160" ry="42" fill="none" stroke="#00E5FF" stroke-opacity="0.5" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="150" ry="150" fill="none" stroke="#C0C0C0" stroke-opacity="0.35" stroke-width="1">
+      <animate attributeName="ry" values="150;45;150" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="42" ry="120" fill="none" stroke="#0066FF" stroke-opacity="0.4" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="95" fill="none" stroke="#00E5FF" stroke-opacity="0.5" stroke-dasharray="30 20" stroke-width="1.2">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Orbiting particles -->
+    <circle r="5" fill="#00E5FF" filter="url(#glow)">
+      <animateMotion dur="18s" repeatCount="indefinite" path="M0,-185 A185,185 0 1,1 0,185 A185,185 0 1,1 0,-185"/>
+    </circle>
+    <circle r="4" fill="#FFFFFF">
+      <animateMotion dur="14s" repeatCount="indefinite" path="M0,-160 A160,42 0 1,0 0,160 A160,42 0 1,0 0,-160" rotate="auto"/>
+    </circle>
+    <circle r="3.5" fill="#0066FF">
+      <animateMotion dur="16s" repeatCount="indefinite" path="M-42,0 A42,120 0 1,0 42,0 A42,120 0 1,0 -42,0"/>
+    </circle>
+    <circle r="3" fill="#C0C0C0">
+      <animateMotion dur="8s" repeatCount="indefinite" path="M0,-95 A95,95 0 1,1 0,95 A95,95 0 1,1 0,-95"/>
+    </circle>
+
+    <!-- Core reactor -->
+    <circle r="58" fill="url(#core)" filter="url(#bigGlow)">
+      <animate attributeName="r" values="58;66;58" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="58" fill="none" stroke="#00E5FF" stroke-width="2">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Spinning electron arcs -->
+    <path d="M-50,0 A50,50 0 1 1 50,0" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0,-50 A50,50 0 1 0 0,50" fill="none" stroke="#00E5FF" stroke-opacity="0.8" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <circle r="16" fill="#FFFFFF">
+      <animate attributeName="r" values="16;26;16" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#00E5FF" filter="url(#glow)">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M0,-68 A68,68 0 1,1 0,68 A68,68 0 1,1 0,-68"/>
+    </circle>
+  </g>
+</svg>
+</content>

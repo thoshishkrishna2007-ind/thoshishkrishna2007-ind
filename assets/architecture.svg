@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540">
+  <defs>
+    <linearGradient id="node" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="al" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <filter id="aglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00E5FF" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="60" font-size="26" font-weight="bold" fill="#FFFFFF" letter-spacing="2">AI SYSTEM ARCHITECTURE</text>
+    <text x="40" y="86" font-size="14" font-family="monospace" fill="#00E5FF">> architecture.os_init()</text>
+  </g>
+
+  <!-- Layer labels on left -->
+  <g font-size="11" fill="#00E5FF" font-family="monospace" opacity="0.6">
+    <text x="80" y="45">L1</text>
+    <text x="80" y="175">L2</text>
+    <text x="80" y="275">L3</text>
+    <text x="80" y="375">L4</text>
+    <text x="80" y="475">L5</text>
+  </g>
+
+  <!-- Cloud Infrastructure -->
+  <g transform="translate(280,420)">
+    <rect width="360" height="76" rx="16" fill="url(#node)" stroke="#0066FF" stroke-opacity="0.6" stroke-width="1.5" filter="url(#aglow)"/>
+    <text x="180" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#00E5FF">CLOUD INFRASTRUCTURE</text>
+    <text x="180" y="56" text-anchor="middle" font-size="12" font-family="monospace" fill="#C0C0C0">Microsoft Azure · Scalable · Secure</text>
+  </g>
+
+  <!-- Database -->
+  <g transform="translate(280,320)">
+    <rect width="360" height="76" rx="16" fill="url(#node)" stroke="#00E5FF" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">DATABASE</text>
+    <text x="180" y="56" text-anchor="middle" font-size="12" font-family="monospace" fill="#C0C0C0">Data Persistence Layer</text>
+  </g>
+
+  <!-- AI Engine -->
+  <g transform="translate(280,220)">
+    <rect width="360" height="76" rx="16" fill="url(#node)" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5" filter="url(#aglow)"/>
+    <text x="180" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">AI ENGINE</text>
+    <text x="180" y="56" text-anchor="middle" font-size="12" font-family="monospace" fill="#00E5FF">ML · GenAI · Digital Twin Core</text>
+  </g>
+
+  <!-- Backend API -->
+  <g transform="translate(280,120)">
+    <rect width="360" height="76" rx="16" fill="url(#node)" stroke="#00E5FF" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">BACKEND API</text>
+    <text x="180" y="56" text-anchor="middle" font-size="12" font-family="monospace" fill="#C0C0C0">Node.js · FastAPI Services</text>
+  </g>
+
+  <!-- Frontend -->
+  <g transform="translate(280,20)">
+    <rect width="360" height="76" rx="16" fill="url(#node)" stroke="#C0C0C0" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#C0C0C0">FRONTEND</text>
+    <text x="180" y="56" text-anchor="middle" font-size="12" font-family="monospace" fill="#C0C0C0">React · Next.js · Tailwind</text>
+  </g>
+
+  <!-- User (top) -->
+  <g transform="translate(280,-80)">
+    <rect width="360" height="76" rx="16" fill="url(#node)" stroke="#00E5FF" stroke-opacity="0.6" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">USER</text>
+    <text x="180" y="56" text-anchor="middle" font-size="12" font-family="monospace" fill="#C0C0C0">Experience Layer</text>
+  </g>
+
+  <!-- Connector lines -->
+  <g stroke="#00E5FF" stroke-opacity="0.4" stroke-width="2">
+    <line x1="460" y1="56" x2="460" y2="120"/>
+    <line x1="460" y1="196" x2="460" y2="220"/>
+    <line x1="460" y1="296" x2="460" y2="320"/>
+    <line x1="460" y1="396" x2="460" y2="420"/>
+  </g>
+  <!-- Data pulse dots traveling down -->
+  <circle r="5" fill="#00E5FF" filter="url(#aglow)">
+    <animate attributeName="cy" values="56;120;56" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="5" fill="#FFFFFF">
+    <animate attributeName="cy" values="196;220;196" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="5" fill="#00E5FF" filter="url(#aglow)">
+    <animate attributeName="cy" values="296;320;296" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="5" fill="#FFFFFF">
+    <animate attributeName="cy" values="396;420;396" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Side arrows showing bidirectional flow -->
+  <g stroke="#00E5FF" stroke-opacity="0.3" stroke-width="1.5" fill="none">
+    <path d="M700,96 L720,96 M720,96 L715,90 M720,96 L715,102"/>
+    <path d="M700,296 L720,296 M720,296 L715,290 M720,296 L715,302"/>
+  </g>
+</svg>
+</content>

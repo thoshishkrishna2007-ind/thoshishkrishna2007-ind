@@ -1,0 +1,41 @@
+# Profile GIF — Instructions
+
+> **Note:** GitHub cannot render animated GIFs directly from SVG files. To create a premium animated `profile.gif`, use one of these methods:
+
+## Option A — Convert an SVG to GIF (Recommended)
+
+Use a free online converter or CLI tool to convert `hologram.svg` (or `ai-core.svg`) into an animated GIF:
+
+1. Open `assets/hologram.svg` in a browser to preview the animation.
+2. Use a screen recorder (e.g., OBS, LICEcap) to record the SVG animation.
+3. Export the recording as an optimized GIF (240px–480px width, few colors to keep size small).
+
+### CLI (ImageMagick / gifski)
+```bash
+# Requires the SVG to be rendered first (e.g., via a headless browser)
+# Simple approach with conversion tools:
+convert assets/hologram.svg -resize 400x400 assets/profile.gif
+```
+
+## Option B — Use a canvas-based GIF generator
+- Use `Screencastify`, `Kap`, or `GIPHY Capture` to capture the SVG animation.
+- Trim and export at small dimensions.
+
+## Option C — Placeholder (works immediately)
+If you do not have a GIF yet, the README already references the SVG hologram directly, so the profile still renders beautifully.
+
+---
+
+## Recommended GIF spec
+| Property | Value |
+|----------|-------|
+| Width | 240–480 px |
+| Loop | Forever |
+| Fps | 12–24 |
+| Palette | 32–64 colors |
+| File size | < 2 MB (GitHub limit) |
+
+## Customization
+Replace `assets/profile.gif` with your generated file. The README references it via:
+```md
+![Profile](assets/profile.gif)
