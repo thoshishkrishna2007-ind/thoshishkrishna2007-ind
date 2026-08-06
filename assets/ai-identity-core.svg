@@ -32,8 +32,15 @@
   </circle>
 
   <!-- ===== PROFILE PHOTO as core ===== -->
-  <image x="164" y="164" width="192" height="192" clip-path="url(#core-crop)"
-         href="https://avatars.githubusercontent.com/u/254927016?v=4" preserveAspectRatio="xMidYMid slice"/>
+  <image 
+x="128"
+y="68"
+width="264"
+height="264"
+clip-path="url(#circular-crop)"
+href="profile.png"
+preserveAspectRatio="xMidYMid slice"
+/>
   <circle cx="260" cy="260" r="96" fill="none" stroke="#00E5FF" stroke-opacity="0.6" stroke-width="2"/>
 
   <!-- ===== ROTATING OUTER RINGS (smooth, balanced) ===== -->
